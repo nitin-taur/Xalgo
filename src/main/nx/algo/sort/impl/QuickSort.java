@@ -2,7 +2,7 @@ package nx.algo.sort.impl;
 
 import java.util.Comparator;
 
-import nx.ds.util.CollectionUtils;
+import nx.algo.util.CollectionUtils;
 
 
 public class QuickSort<T> implements ISort<T>

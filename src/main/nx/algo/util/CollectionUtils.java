@@ -1,4 +1,4 @@
-package nx.ds.util;
+package nx.algo.util;
 
 public class CollectionUtils
 {
