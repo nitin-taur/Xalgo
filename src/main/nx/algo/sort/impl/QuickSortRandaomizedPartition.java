@@ -2,7 +2,7 @@ package nx.algo.sort.impl;
 
 import java.util.Random;
 
-import nx.algo.util.CollectionUtils;
+import nx.util.collection.CollectionUtils;
 
 
 public class QuickSortRandaomizedPartition<T> extends QuickSort<T>

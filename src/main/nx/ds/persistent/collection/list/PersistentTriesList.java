@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.ListIterator;
 import java.util.Stack;
 
-import nx.algo.util.DecimalToBaseNConverter;
+import nx.util.number.DecimalToBaseNConverter;
 
 public class PersistentTriesList<E>
 {

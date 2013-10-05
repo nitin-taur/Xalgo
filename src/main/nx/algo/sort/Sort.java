@@ -4,7 +4,7 @@ import java.util.Comparator;
 import nx.algo.sort.impl.InsertionSort;
 import nx.algo.sort.impl.QuickSort;
 import nx.algo.sort.impl.QuickSortRandaomizedPartition;
-import nx.algo.util.Comparators;
+import nx.util.collection.Comparators;
 
 
 

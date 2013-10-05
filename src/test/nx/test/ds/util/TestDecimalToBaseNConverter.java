@@ -1,7 +1,7 @@
 package nx.test.ds.util;
 
 import junit.framework.Assert;
-import nx.algo.util.DecimalToBaseNConverter;
+import nx.util.number.DecimalToBaseNConverter;
 
 import org.junit.Test;
 
