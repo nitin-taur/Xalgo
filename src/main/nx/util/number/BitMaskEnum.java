@@ -1,7 +1,7 @@
 package nx.util.number;
 
 /**
- * This class creates bitmask on enum. User can flip bits at 'ordinal+1' position. For example:
+ * This class creates bitmask on enum. User can flip bits at 'ordinal' position. For example:
  * <pre>
  *  enum Alphabet{	A,B,C,D,E,F;}
 	
