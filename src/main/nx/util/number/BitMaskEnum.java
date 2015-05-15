@@ -10,20 +10,19 @@ package nx.util.number;
 	mask.set(Alphabet.E); // A=true,B=false,C=false,D=false,E=true,F=false,
 	mask.unset(Alphabet.A);// A=false,B=false,C=false,D=false,E=true,F=false,
  * </pre>
- * @author Integral Development Corporation
  *
  * @param <E>
  */
 public class BitMaskEnum<E extends Enum<E>>
 {
-	private int mask = 0;
+	private long mask = 0;
 	
 	/**
 	 * Set bit for specified enum entry and return mask.
 	 * @param e
 	 * @return underlying mask value after set.
 	 */
-	public int set(Enum<E> e)
+	public long set(E e)
 	{
 		mask = mask | getBitIndexMask(e);
 		return mask;
@@ -34,7 +33,7 @@ public class BitMaskEnum<E extends Enum<E>>
 	 * @param e
 	 * @return true is bit for specified enum is set
 	 */
-	public boolean isSet(Enum<E> e)
+	public boolean isSet(E e)
 	{
 		int temp = mask;
 		return (temp & getBitIndexMask(e)) == getBitIndexMask(e);
@@ -45,7 +44,7 @@ public class BitMaskEnum<E extends Enum<E>>
 	 * @param e
 	 * @return underlying mask value after flip
 	 */
-	public int flip(Enum<E> e)
+	public int flip(E e)
 	{
 		mask = mask & ~getBitIndexMask(e);
 		return mask;
@@ -66,7 +65,7 @@ public class BitMaskEnum<E extends Enum<E>>
 	 * @param e
 	 * @return underlying mask value after unset
 	 */
-	public int unset(Enum<E> e)
+	public long unset(E e)
 	{
 		if(isSet(e))
 		{
@@ -78,13 +77,13 @@ public class BitMaskEnum<E extends Enum<E>>
 	/**
 	 * @return underlying mask value.
 	 */
-	public int getMask()
+	public long getMask()
 	{
 		return mask;
 	}
 	
-	private int getBitIndexMask(Enum<E> e)
+	private int getBitIndexMask(E e)
 	{
-		return 1 << e.ordinal()+1;
+		return 1 << e.ordinal();
 	}
 }
