@@ -44,7 +44,7 @@ public class BitMaskEnum<E extends Enum<E>>
 	 * @param e
 	 * @return underlying mask value after flip
 	 */
-	public int flip(E e)
+	public long flip(E e)
 	{
 		mask = mask & ~getBitIndexMask(e);
 		return mask;
@@ -54,7 +54,7 @@ public class BitMaskEnum<E extends Enum<E>>
 	 *  Flip all bit of underlying mask and return mask.
 	 * @return underlying mask value after flip.
 	 */
-	public int flipAll()
+	public long flipAll()
 	{
 		mask = ~mask;
 		return mask;
